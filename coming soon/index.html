@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="logo"><a href="#"><img
+                    src="https://b.kisscc0.com/20180815/xgq/kisscc0-javascript-logo-number-angularjs-node-js-js-5b74177e8401c7.7492136215343348465407.png"
+                    alt=""></a></div>
+        <div class="wall">
+            <div class="text">
+                COMING SOON
+                <hr>
+                <div id="demo">
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+<script>
+    var countDownDate = new Date("Dec 31, 2019 00:00:00").getTime();
+
+    /*=====  Update the counnt down every 1   ======*/
+    var countDownfunction = setInterval(function () {
+
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000); document.getElementById('demo').innerHTML = days + "d  " + hours + "h  " + minutes + "m  " + seconds + "s";
+
+        if (distance < 0) {
+            clearInterval(countDownfunction);
+            document.getElementById("demo".innerHTML = "EXPIRED");
+
+        }
+
+
+
+
+    })
+
+</script>
+
+</html>
